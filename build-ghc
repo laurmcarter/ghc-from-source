@@ -1,0 +1,16 @@
+#!/bin/bash
+
+folder="ghc-7.6.1"
+file="$folder-i386-unknown-linux.tar.bz2"
+
+wget "www.haskell.org/ghc/dist/7.6.1/$file"
+
+tar xvf "$file"
+cd "$folder"
+
+./configure
+
+if [ $? -eq 0 ]; then
+    make install
+fi
+

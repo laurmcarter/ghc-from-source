@@ -1,0 +1,13 @@
+#!/bin/bash
+
+folder="$1"
+
+cd "$folder"
+
+runghc Setup configure -p
+
+if [ $? -eq 0 ]; then
+    runghc Setup build
+    runghc Setup install
+fi
+

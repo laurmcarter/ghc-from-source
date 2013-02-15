@@ -1,0 +1,16 @@
+#!/bin/bash
+
+hget text 0.11.2.3
+hget transformers 0.3.0.0
+hget mtl 2.1.2
+hget parsec 3.1.3
+hget network 2.4.1.0
+hget HTTP 4000.2.8
+
+hget zlib 0.5.4.0
+hget Cabal 1.16.0.3
+
+hget random 1.0.1.1
+hget stm 2.4.2
+hget cabal-install 1.16.0.2
+

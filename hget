@@ -1,0 +1,16 @@
+#!/bin/bash
+
+pkg="$1"
+vrs="$2"
+
+folder="$pkg-$vrs"
+file="$folder.tar.gz"
+
+rm -r "$folder*"
+
+wget "http://hackage.haskell.org/packages/archive/$pkg/$vrs/$file"
+
+tar xvf "$file"
+
+buildhaskell "$folder"
+
